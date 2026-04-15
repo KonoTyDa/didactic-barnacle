@@ -1,0 +1,137 @@
+body{
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: darkslategrey;
+}
+
+.container{
+    background-color: lightslategray;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+    max-width:  75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+header{
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333333;
+    margin-bottom: 20px;
+}
+
+header img{
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 0;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em darkslateblue, 0 0 0.2em darkslateblue
+}
+
+.form-group{
+    display: grid;
+    gap: 10px;
+}
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(12, 32, 51)
+}
+
+input[type="text"], input[type="email"], input[type="tel"],textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea{
+    min-height: 80px;
+}
+
+.contact-options{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 50px;
+    margin-bottom: 25px
+}
+
+.contact-options label {
+    align-self: center;
+    margin-bottom: 0;
+}
+/* I hope this satisfies your button needs*/
+button[type="submit"]{
+    background-color: #afafaf;
+    color: #fff;
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative; 
+    overflow: hidden; 
+    z-index: 1; 
+    transition: color 0.6s ease;
+}
+
+button[type="submit"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -160%;
+    width: 150%;
+    height: 100%;
+    background-color: #333333;
+    z-index: -1;
+    transform: skewX(-20deg);
+    transition: left 0.6s ease; 
+}
+
+button[type="submit"]:hover::before{
+    left: -30%;
+}
+
+button[type="submit"]:hover{
+    color: #fff;
+}
+
+footer{
+    text-align: center;
+    background-color: #333333;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+    width: max-content;
+    margin: 40px auto 10px auto;
+    font-size: 14px
+}
+
+input:user-valid, select:user-valid{
+    border-color: #04aa6d;
+    border-width: 2.234745px;
+    background-color: #333333;
+}
+
+input[type=text]:focus,input[type=date]:focus, select:focus{
+    background-color: #afafaf;
+}
+
+input[type="radio"]{
+    width: auto;
+    height: auto;
+    justify-self: end;
+    align-self: center;
+    cursor: pointer;
+}
+
